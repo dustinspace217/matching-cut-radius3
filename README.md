@@ -36,18 +36,30 @@ This result was produced and checked by an AI-driven research process
   repair are both preserved in `reviews/`). The final document
   survived all four; the last three verdicts are "could not break it"
   and twice "contains a correct proof of the theorem as stated."
-- **NOT yet reviewed by human experts. Partially formalized.** In the
-  Lean 4 formalization (`lean/McRadius3.lean`, against mathlib), the
-  construction and all statements elaborate, and the four STRUCTURAL
-  theorems — bipartiteness, connectivity, radius exactly 3 (both
-  bounds) — are proven and kernel-checked (axioms: propext /
-  Classical.choice / Quot.sound only, no sorryAx). The main
-  equivalence (satisfiable ↔ has matching cut) is still `sorry` and in
-  progress; it is the entire mathematical content, so the structural
-  proofs confirm the construction's shape, not the reduction's
-  correctness. Model reviews are strong evidence, not proof of a
-  proof. Treat the result as a candidate until it survives expert
-  human refereeing or the equivalence is kernel-checked.
+- **The combinatorial core is FULLY MACHINE-VERIFIED in Lean 4**
+  (`lean/McRadius3.lean`, against mathlib; zero `sorry`): the
+  construction G(F); bipartiteness; connectivity; radius exactly 3
+  (both bounds); and the equivalence **G(F) has a matching cut ⟺ F is
+  satisfiable**, both directions. Axiom audit: propext /
+  Classical.choice / Quot.sound only — no `sorryAx`. The file also
+  contains a non-vacuousness witness: an explicitly unsatisfiable
+  formula whose guarded graph is kernel-proven to have NO matching
+  cut, so the equivalence demonstrably does work on NO-instances.
+  Every theorem was verified twice (the proving agent's compile and an
+  independent re-compile + axiom audit by a second session).
+- **What the Lean file does NOT establish**, stated exactly: the
+  NP-hardness of the source problem (Schaefer's dichotomy, applied
+  informally in §1 of the proof document) and the polynomial-time
+  bound of the reduction (visibly size-linear, |V| = 6n + 19m + 12)
+  are not formalized — the file contains no complexity classes, only
+  the combinatorics. The general form of Lemma B' is likewise not
+  formalized (the Lean proof argues directly on G(F), which is all the
+  theorem needs). And formalization verifies the construction AS
+  ENCODED; the encoding was frozen before proving, matches the paper's
+  §2 edge list, and reproduces the paper's structural predictions.
+- **NOT yet reviewed by human experts.** That, and not further model
+  or machine evidence, is the remaining gate between "candidate" and
+  "theorem."
 
 ## Credit
 
