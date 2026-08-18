@@ -1,0 +1,6 @@
+UNGUARDED leak sat=False mc=True A1=False A0=False B=['q0', 'w_a', 'w_p_0_2', 'w_p_1_1'] n=1 cl=[[(0, True), (0, True), (0, False)], [(0, False), (0, True), (0, False)]]
+UNGUARDED leak sat=False mc=True A1=False A0=False B=['q0', 'w_a', 'w_p_0_2'] n=1 cl=[[(0, False), (0, False), (0, True)], [(0, True), (0, False), (0, True)], [(0, True), (0, True), (0, False)]]
+UNGUARDED leak sat=False mc=True A1=False A0=False B=['q0', 'w_a', 'w_p_1_0', 'w_p_2_2'] n=1 cl=[[(0, False), (0, False), (0, False)], [(0, True), (0, False), (0, False)], [(0, True), (0, True), (0, False)]]
+UNGUARDED: leaks reproduced=50 (of which case-B=50)
+expected from Block 8: 50 spurious cuts on this exact battery
+GUARDED on the same 400-formula battery: leaks=0

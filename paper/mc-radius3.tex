@@ -1,0 +1,82 @@
+% Matching Cut is NP-complete on bipartite graphs of radius 3
+% DRAFT SKELETON — content to be ported from scratch/mc-radius3-theorem.md
+% Status: candidate result; four adversarial model reviews (3 families);
+% Lean formalization in progress (mathlib4 branch mc-radius3).
+% DO NOT SUBMIT until: Lean state settled, author correspondence done,
+% fresh literature check at submission time, Dustin's sign-off.
+\documentclass[11pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{observation}[theorem]{Observation}
+
+\title{Matching Cut is NP-complete on Bipartite Graphs of Radius~3}
+\author{Dustin Kadrmas\thanks{With substantial machine assistance;
+see Section~\ref{sec:provenance} for a full account of how this result
+was produced and verified.}}
+\date{Draft of 2026-08-18 --- not for distribution}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A matching cut of a graph is an edge cut that is a matching. Lucke,
+Martin, Paulusma and Siggers [arXiv:2501.08735] determined the
+complexity of \textsc{Matching Cut} on bipartite graphs of every
+radius and diameter except radius exactly~3, which they posed as an
+open problem. We resolve this case: \textsc{Matching Cut} is
+NP-complete on bipartite graphs of radius~3. The reduction is from a
+signed variant of \textsc{Not-1-in-3-Sat}, built around a
+BFS-layer analysis of radius-3 bipartite graphs and a ``guard''
+gadget battery that eliminates all cuts not aligned with the intended
+encoding.
+\end{abstract}
+
+\section{Introduction}
+% TODO port: problem history, the dichotomy program for MC on bounded
+% radius/diameter (Le--Le diameter dichotomy; Lucke et al. bipartite
+% table), statement of the open cell, our result, proof overview.
+% Emphasize: radius <= 2 poly / radius >= 4 NPC known; this closes the
+% bipartite radius column for the decision problem. DPM radius 3
+% remains open.
+
+\section{Preliminaries}
+% TODO port: colouring form of matching cut; signed NOT-1-IN-3-SAT
+% and its NP-completeness via Schaefer (signs essential); n,m >= 1
+% restriction.
+
+\section{The construction}
+% TODO port: Section 2 of the research note (layers, witnesses,
+% guards, ballast, killer; |V| = 6n + 19m + 12), with a figure.
+
+\section{Structural properties}
+% TODO port: bipartiteness, connectivity, radius exactly 3
+% (Claims 3.1--3.3), diameter >= 4 remark.
+
+\section{Valid colourings}
+% TODO port: WLOG; the case split; A0 impossibility; the freeze claim;
+% case-B impossibility (three branches).
+
+\section{The reformulation and the equivalence}
+% TODO port: layering observation, Lemma B', bridge Lemma D,
+% ISLAND-hardness Lemma A, assembly.
+
+\section{Provenance and verification}\label{sec:provenance}
+% TODO: full transparency section. The result was produced by an
+% AI-driven research process directed by the author: construction and
+% proofs by Claude (Anthropic) building on a base construction
+% proposed by GPT-5.6 (OpenAI); machine verification by exhaustive and
+% randomized batteries against independently implemented oracles with
+% mutation controls; four adversarial model reviews across three model
+% families; Lean 4 formalization state: [UPDATE AT SUBMISSION TIME].
+% All code, verification logs, and review transcripts:
+% [repository link TBD — Dustin's call].
+
+\section{Open problems}
+% TODO: DPM bipartite radius 3; PMC diameter 4-7.
+
+\end{document}

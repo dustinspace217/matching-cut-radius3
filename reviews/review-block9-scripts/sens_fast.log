@@ -1,0 +1,5 @@
+ORIGINAL guarded                     mismatches=  0 caseB-alive=  0 skipped=0
+MUTANT: guards only for q_i          mismatches= 18 caseB-alive= 40 skipped=0
+MUTANT: no guards at all             mismatches= 18 caseB-alive= 40 skipped=0
+MUTANT: killer Zk disconnected       mismatches= 18 caseB-alive= 40 skipped=0
+MUTANT: one ballast only             mismatches=  0 caseB-alive=  0 skipped=0

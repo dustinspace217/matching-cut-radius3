@@ -1,0 +1,3 @@
+n=1 m=3: 512 formulas, 270 UNSAT
+OK  |V|=75 sat=False mc=False 206.7s  (done=1 mism=0 to=0 total=207s)
+OK  |V|=75 sat=False mc=False 198.4s  (done=2 mism=0 to=0 total=405s)

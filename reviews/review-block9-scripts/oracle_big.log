@@ -1,0 +1,21 @@
+  ..0 done 1s
+  ..25 done 423s
+TIMEOUT n=3 m=3 sat=False |V|=87
+TIMEOUT n=2 m=3 sat=False |V|=81
+  ..75 done 1343s
+  ..100 done 1642s
+  ..125 done 1822s
+TIMEOUT n=2 m=3 sat=False |V|=81
+  ..150 done 2281s
+TIMEOUT n=3 m=3 sat=False |V|=87
+  ..175 done 2574s
+TIMEOUT n=2 m=3 sat=False |V|=81
+  ..225 done 3045s
+TIMEOUT n=2 m=3 sat=False |V|=81
+  ..250 done 3671s
+TIMEOUT n=2 m=3 sat=False |V|=81
+TIMEOUT n=3 m=3 sat=False |V|=87
+  ..275 done 4338s
+TIMEOUT n=3 m=3 sat=False |V|=87
+TIMEOUT n=3 m=3 sat=False |V|=87
+tested 290 (UNSAT=33); mismatches 0; timeouts 10; 4949s

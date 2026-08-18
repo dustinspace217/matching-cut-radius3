@@ -1,0 +1,4 @@
+[fresh random n<=2 m<=2] tested=120 UNSAT-in-set=11 mismatches=0 timeouts=0  (37s)
+[ALL UNSAT n=1 m=2] tested=18 UNSAT-in-set=18 mismatches=0 timeouts=0  (15s)
+[UNSAT-focused n=2 m=2 (|V|=62)] tested=25 UNSAT-in-set=25 mismatches=0 timeouts=0  (101s)
+TOTAL MISMATCHES: 0
