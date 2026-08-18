@@ -36,11 +36,18 @@ This result was produced and checked by an AI-driven research process
   repair are both preserved in `reviews/`). The final document
   survived all four; the last three verdicts are "could not break it"
   and twice "contains a correct proof of the theorem as stated."
-- **NOT yet reviewed by human experts. NOT yet formalized.** A Lean 4
-  formalization is in progress (`lean/McRadius3.lean` holds the full
-  construction and theorem statements, proofs pending). Model reviews
-  are strong evidence, not proof of a proof. Treat the result as a
-  candidate until it survives expert human refereeing.
+- **NOT yet reviewed by human experts. Partially formalized.** In the
+  Lean 4 formalization (`lean/McRadius3.lean`, against mathlib), the
+  construction and all statements elaborate, and the four STRUCTURAL
+  theorems — bipartiteness, connectivity, radius exactly 3 (both
+  bounds) — are proven and kernel-checked (axioms: propext /
+  Classical.choice / Quot.sound only, no sorryAx). The main
+  equivalence (satisfiable ↔ has matching cut) is still `sorry` and in
+  progress; it is the entire mathematical content, so the structural
+  proofs confirm the construction's shape, not the reduction's
+  correctness. Model reviews are strong evidence, not proof of a
+  proof. Treat the result as a candidate until it survives expert
+  human refereeing or the equivalence is kernel-checked.
 
 ## Credit
 
