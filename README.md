@@ -1,7 +1,7 @@
 # Matching Cut is NP-complete on Bipartite Graphs of Radius 3
 
-**A candidate resolution of Open Problem 1 of Lucke, Martin, Paulusma,
-and Siggers, ["Matching Cut and Variants on Bipartite Graphs of
+**A candidate resolution of Open Problem 1 of Felicia Lucke,
+["Matching Cut and Variants on Bipartite Graphs of
 Bounded Radius and Diameter"](https://arxiv.org/abs/2501.08735)
 (January 2025), decision variant.**
 

@@ -34,7 +34,7 @@ which every vertex has at most one neighbor of the opposite color
 throughout; the two forms are trivially equivalent (the cut edges at a
 vertex are exactly its cross edges).
 
-Known (Lucke, Martin, Paulusma, Siggers, arXiv:2501.08735, Table 1)
+Known (Lucke, arXiv:2501.08735, Table 1)
 [verified, primary]: on bipartite graphs, MATCHING CUT is polynomial
 for radius ≤ 2 and diameter ≤ 3, NP-complete for radius ≥ 4 and
 diameter ≥ 4; radius 3 is posed as Open Problem 1. Fresh literature
