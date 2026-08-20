@@ -3,7 +3,8 @@
 **A candidate resolution of Open Problem 1 of Felicia Lucke,
 ["Matching Cut and Variants on Bipartite Graphs of
 Bounded Radius and Diameter"](https://arxiv.org/abs/2501.08735)
-(January 2025), decision variant.**
+(arXiv January 2025; published as [Theoretical Computer Science 1052,
+2025](https://doi.org/10.1016/j.tcs.2025.115429)), decision variant.**
 
 **Claim.** MATCHING CUT (does a graph admit an edge cut that is a
 matching?) is NP-complete on bipartite graphs of radius exactly 3.
