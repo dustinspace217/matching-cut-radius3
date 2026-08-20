@@ -49,9 +49,9 @@ directions) is machine-verified in Lean~4 with zero holes.
 
 A \emph{matching cut} of a graph $G$ is a partition of $V(G)$ into two
 nonempty classes such that the edges joining the classes form a
-matching. Equivalently, in the colouring form used throughout this
-paper: a red/blue colouring of $V(G)$ using both colours in which
-every vertex has at most one neighbour of the opposite colour. The
+matching. Equivalently, in the coloring form used throughout this
+paper: a red/blue coloring of $V(G)$ using both colors in which
+every vertex has at most one neighbor of the opposite color. The
 \textsc{Matching Cut} decision problem, introduced in the context of
 networks immune to single-link failures, has a long dichotomy
 literature over graph classes.
@@ -90,7 +90,7 @@ their gadget machinery requires vertices far from any single center.
 The reduction squeezes clause machinery into the radius-3 ball by
 routing all constraint logic through the third layer, and then
 eliminates the spurious cuts this permissiveness creates with a
-\emph{guard battery}: a single killer vertex whose neighbourhood
+\emph{guard battery}: a single killer vertex whose neighborhood
 freezes under every possible deviation, making any cut that does not
 follow the intended encoding immediately infeasible.
 
@@ -99,10 +99,10 @@ follow the intended encoding immediately infeasible.
 All graphs are finite, simple, and undirected. For a connected graph
 $G$ and $u \in V(G)$, $\mathrm{ecc}(u) = \max_v \mathrm{dist}(u,v)$;
 the radius of $G$ is $\min_u \mathrm{ecc}(u)$. A \emph{matching-cut
-colouring} of $G$ is a function $c : V(G) \to \{\mathrm{R},
-\mathrm{B}\}$ such that both colours are used and every vertex has at
-most one neighbour of the opposite colour; $G$ has a matching cut iff
-it has a matching-cut colouring.
+coloring} of $G$ is a function $c : V(G) \to \{\mathrm{R},
+\mathrm{B}\}$ such that both colors are used and every vertex has at
+most one neighbor of the opposite color; $G$ has a matching cut iff
+it has a matching-cut coloring.
 
 \textsc{Signed Not-1-in-3-Sat}: variables $x_1,\dots,x_n$; each
 clause is an ordered triple of literals (repetitions allowed within
@@ -124,7 +124,7 @@ Fix a formula $F$ with $n \ge 1$ variables and $m \ge 1$ clauses. The
 graph $G(F)$ has four layers.
 
 \begin{itemize}
-\item \textbf{$L_0$:} the centre $u$.
+\item \textbf{$L_0$:} the center $u$.
 \item \textbf{$L_1$ (witnesses), each adjacent to $u$:}
   shared variable witnesses $q_i$ ($i \in [n]$); the anchor witness
   $w_a$; a proxy witness $w_p$ for each clause position
@@ -150,7 +150,7 @@ $f_i$ if it is $\lnot x_i$; \ $z_C \sim p_{C,1}, p_{C,2}, p_{C,3}$;
 
 Thus $|V(G(F))| = 6n + 19m + 12$, and the construction is computable
 in linear time. Three counts used repeatedly: $a$, each $t_i, f_i$,
-and each $p_{C,j}$ have exactly one $L_1$-neighbour; each guard and
+and each $p_{C,j}$ have exactly one $L_1$-neighbor; each guard and
 each ballast vertex has exactly two; every $L_3$ vertex has degree at
 least two ($\gamma_i$: 3; copies: 2; $z_C$: 3; $Z$: $2 + |\BW| \ge
 5$).
@@ -171,9 +171,9 @@ L_3$ are the BFS layers from $u$.
 \end{claim}
 \begin{proof}
 Every $L_1$ vertex is adjacent to $u$. Every $L_2$ vertex has an
-$L_1$-neighbour (the witness counts above) and is not adjacent to $u$,
-so it lies at distance~2. Every $L_3$ vertex has an $L_2$-neighbour
-and all its neighbours are in $L_2$, so it lies at distance~3; $L_3
+$L_1$-neighbor (the witness counts above) and is not adjacent to $u$,
+so it lies at distance~2. Every $L_3$ vertex has an $L_2$-neighbor
+and all its neighbors are in $L_2$, so it lies at distance~3; $L_3
 \ne \emptyset$ ($Z$ exists).
 \end{proof}
 
@@ -187,10 +187,10 @@ distances odd. (i)~A vertex $z \in L_3$ is not adjacent to $u$, so
 $\mathrm{dist}(z,u) \ge 3$. (ii)~A vertex $v \in L_1$ with
 $\mathrm{ecc}(v) \le 2$ would be adjacent to every vertex of the
 opposite part, in particular all of $L_2$; but every $L_1$ vertex has
-at most three $L_2$-neighbours while $|L_2| \ge 4$ ($a, T_1, T_2,
+at most three $L_2$-neighbors while $|L_2| \ge 4$ ($a, T_1, T_2,
 g_{w_a}$). (iii)~A vertex $v \in L_2$ with $\mathrm{ecc}(v) \le 2$
 would be adjacent to every $L_1$ vertex; but every $L_2$ vertex has at
-most two $L_1$-neighbours while $|L_1| \ge 5$ ($w_a$ and the four
+most two $L_1$-neighbors while $|L_1| \ge 5$ ($w_a$ and the four
 ballast witnesses). (iv)~$\mathrm{ecc}(u) = 3$ by
 Claim~\ref{cl:conn}.
 \end{proof}
@@ -202,8 +202,8 @@ diameter-$\le 3$ class.
 
 \section{The case analysis}\label{sec:cases}
 
-Fix a matching-cut colouring $\chi$ of $G(F)$. Since the definition is
-symmetric under swapping colours, assume $\chi(u) = \mathrm{R}$.
+Fix a matching-cut coloring $\chi$ of $G(F)$. Since the definition is
+symmetric under swapping colors, assume $\chi(u) = \mathrm{R}$.
 
 \begin{claim}\label{cl:budget}
 At most one $L_1$ vertex is blue.
@@ -222,12 +222,12 @@ Case A0 is impossible.
 \end{claim}
 \begin{proof}
 In case A0 the blue set is contained in $L_3$ and is nonempty. A blue
-$z \in L_3$ has all neighbours in $L_2$, all red, so it carries
+$z \in L_3$ has all neighbors in $L_2$, all red, so it carries
 $\deg(z)$ cross edges; but every $L_3$ vertex has degree $\ge 2$.
 \end{proof}
 
 \begin{claim}[freeze]\label{cl:freeze}
-If $v \in L_2$ has two $L_1$-neighbours and both are red, then $v$ is
+If $v \in L_2$ has two $L_1$-neighbors and both are red, then $v$ is
 red.
 \end{claim}
 \begin{proof}
@@ -239,14 +239,14 @@ Case B is impossible.
 \end{claim}
 \begin{proof}
 Let $b$ be the unique blue $L_1$ vertex. The edge $bu$ consumes $b$'s
-budget, so \emph{every other neighbour of $b$ is blue}. By
+budget, so \emph{every other neighbor of $b$ is blue}. By
 Claim~\ref{cl:freeze}, every guard and ballast vertex whose two
 witnesses both differ from $b$ is red. We branch on $b$; the list is
 exhaustive by the $L_1$ inventory of Section~\ref{sec:construction}.
 
-\emph{Branch 1: $b = W \in \BW$.} Then $g_W$ (a neighbour of $b$) is
+\emph{Branch 1: $b = W \in \BW$.} Then $g_W$ (a neighbor of $b$) is
 blue. $g_W$'s other witness $w'_W$ is red, consuming $g_W$'s budget,
-so $g_W$'s remaining neighbour $Z$ is blue. $Z$'s neighbours $T_1$
+so $g_W$'s remaining neighbor $Z$ is blue. $Z$'s neighbors $T_1$
 and $T_2$ are red (their witnesses are ballast witnesses, $\ne b$),
 giving $Z$ two cross edges. Contradiction.
 
@@ -256,14 +256,14 @@ red as before. Contradiction.
 
 \emph{Branch 3: $b$ is a ballast witness, say of $T_1$.} Then $T_1$
 is blue; its other ballast witness is red and consumes its budget, so
-$Z$ is blue. $Z$'s neighbours $T_2$ (witnesses $\ne b$) and every
+$Z$ is blue. $Z$'s neighbors $T_2$ (witnesses $\ne b$) and every
 guard $g_W$ (both witnesses $\ne b$, red by Claim~\ref{cl:freeze})
 are red; already $T_2$ and $g_{w_a}$ give $Z$ two cross edges.
 Contradiction.
 \end{proof}
 
 Consequently $G(F)$ has a matching cut iff it has a \emph{case-A1}
-colouring: $u$ red, $N(u)$ all red, and at least one blue $L_2$
+coloring: $u$ red, $N(u)$ all red, and at least one blue $L_2$
 vertex.
 
 \section{The reformulation}\label{sec:reform}
@@ -271,7 +271,7 @@ vertex.
 Throughout this section $G$ is any connected bipartite graph with a
 vertex $u$ of eccentricity~3 and BFS layers $L_0,\dots,L_3$. Define
 $S := \{v \in L_2 : |N(v) \cap L_1| = 1\}$ and let $w : S \to L_1$
-map $v$ to its unique $L_1$-neighbour.
+map $v$ to its unique $L_1$-neighbor.
 
 \begin{observation}[layering]\label{obs:layer}
 Every edge of $G$ joins consecutive layers: same-layer and
@@ -279,44 +279,44 @@ layer-skipping edges are excluded by bipartite parity and the BFS
 structure, and there is no $L_4$ since $\mathrm{ecc}(u)=3$. In
 particular $N(z) \subseteq L_2$ for $z \in L_3$, there are no
 $L_2$--$L_2$ edges, and every $v \in L_2$ has at least one
-$L_1$-neighbour (a BFS-layer-2 vertex has a neighbour at distance~1
+$L_1$-neighbor (a BFS-layer-2 vertex has a neighbor at distance~1
 from $u$).
 \end{observation}
 
 \begin{lemma}\label{lem:reform}
-$G$ has a matching-cut colouring with $u$ red, $N(u)$ all red, and
+$G$ has a matching-cut coloring with $u$ red, $N(u)$ all red, and
 $\mathrm{blue} \cap L_2 \ne \emptyset$ \emph{iff} there is a nonempty
 $B_2 \subseteq S$ with:
 \begin{itemize}
 \item[$(\alpha)$] $w$ is injective on $B_2$;
 \item[$(\beta)$] every $z \in N(B_2) \cap L_3$ has
   $|N(z) \setminus B_2| \le 1$, where $N(z)$ is $z$'s full
-  $L_2$-neighbourhood;
+  $L_2$-neighborhood;
 \item[$(\gamma)$] every $v \in L_2 \setminus B_2$ has
   $|N(v) \cap N(B_2) \cap L_3| \le 1$.
 \end{itemize}
 \end{lemma}
 
 \begin{proof}
-($\Rightarrow$) Let $\chi$ be such a colouring and $B_2 :=
+($\Rightarrow$) Let $\chi$ be such a coloring and $B_2 :=
 \mathrm{blue} \cap L_2 \neq \emptyset$. Every $v \in B_2$ has all its
-$L_1$-neighbours red, each a cross edge; the budget and
-Observation~\ref{obs:layer} force exactly one $L_1$-neighbour (so
-$B_2 \subseteq S$) and no further cross, hence every $L_3$-neighbour
+$L_1$-neighbors red, each a cross edge; the budget and
+Observation~\ref{obs:layer} force exactly one $L_1$-neighbor (so
+$B_2 \subseteq S$) and no further cross, hence every $L_3$-neighbor
 of $v$ is blue; so all of $N(B_2) \cap L_3$ is blue. $(\alpha)$:~a
 red witness crosses each blue member of its group, and its budget is
 one. $(\beta)$:~a blue $z \in L_3$ crosses exactly its red
-$L_2$-neighbours, which include all of $N(z) \setminus B_2$.
+$L_2$-neighbors, which include all of $N(z) \setminus B_2$.
 $(\gamma)$:~a red $v \in L_2 \setminus B_2$ crosses each blue
-$L_3$-neighbour, and $N(v) \cap N(B_2) \cap L_3$ is entirely blue.
+$L_3$-neighbor, and $N(v) \cap N(B_2) \cap L_3$ is entirely blue.
 
-($\Leftarrow$) Colour blue exactly $B_2 \cup (N(B_2) \cap L_3)$.
-Budgets: $u$ has no blue neighbour; an $L_1$ vertex has at most one
-blue neighbour by $(\alpha)$; a $v \in B_2$ crosses exactly its
+($\Leftarrow$) Color blue exactly $B_2 \cup (N(B_2) \cap L_3)$.
+Budgets: $u$ has no blue neighbor; an $L_1$ vertex has at most one
+blue neighbor by $(\alpha)$; a $v \in B_2$ crosses exactly its
 witness; a $z \in N(B_2) \cap L_3$ crosses $|N(z) \setminus B_2| \le
 1$ vertices by $(\beta)$; a red $v \in L_2 \setminus B_2$ crosses
 $|N(v) \cap N(B_2) \cap L_3| \le 1$ by $(\gamma)$; and a red $z \in
-L_3 \setminus N(B_2)$ has no blue neighbour. Both colours are used.
+L_3 \setminus N(B_2)$ has no blue neighbor. Both colors are used.
 \end{proof}
 
 Applying Lemma~\ref{lem:reform} to $G(F)$: the selectable set is
@@ -324,10 +324,10 @@ exactly $S = \{a\} \cup \{t_i, f_i\} \cup \{p_{C,j}\}$ (guards and
 ballast have two witnesses), the group partition induced by $w$ is
 $\{t_i, f_i\}$ (sharing $q_i$) plus singletons, and conditions
 $(\beta),(\gamma)$ involve only the base $L_3$ vertices: $Z$'s
-$L_2$-neighbours are all unselectable, so $Z \notin N(B_2)$; every
-base $L_3$ vertex has an all-selectable $L_2$-neighbourhood; and each
+$L_2$-neighbors are all unselectable, so $Z \notin N(B_2)$; every
+base $L_3$ vertex has an all-selectable $L_2$-neighborhood; and each
 unselectable $L_2$ vertex has $\{Z\}$ as its whole
-$L_3$-neighbourhood, making $(\gamma)$ vacuous there. The
+$L_3$-neighborhood, making $(\gamma)$ vacuous there. The
 reformulated problem on $G(F)$ is therefore exactly the following set
 problem on the instance $I(F)$ built from the formula.
 
@@ -336,8 +336,8 @@ problem on the instance $I(F)$ built from the formula.
 \textsc{Island}: given a bipartite graph $(X, \mathcal{Z})$ and a
 partition of $X$ into groups, decide whether some nonempty $B
 \subseteq X$ with at most one member per group satisfies: every $z
-\in N(B)$ has at most one neighbour outside $B$, and every $x \in X
-\setminus B$ has at most one neighbour in $N(B)$.
+\in N(B)$ has at most one neighbor outside $B$, and every $x \in X
+\setminus B$ has at most one neighbor in $N(B)$.
 
 The instance $I(F)$: $X = \{a\} \cup \{t_i, f_i\} \cup \{p_{C,j}\}$
 with groups $\{t_i,f_i\}$ and singletons; $\mathcal{Z}$-side:
@@ -356,7 +356,7 @@ $\textsc{Island}(I(F))$ is a YES-instance iff $F$ is satisfiable.
 group condition holds by construction. Every gate $\gamma_i$ is
 touched and has exactly one of $t_i, f_i$ outside. A copy is touched
 iff its base is in $B$ iff its proxy is in $B$, so touched copies
-have no neighbour outside. A clause vertex $z_C$ is touched iff its
+have no neighbor outside. A clause vertex $z_C$ is touched iff its
 true-literal count $t_C \ge 1$, and then has $3 - t_C \le 1$ outside
 since $t_C \in \{0,2,3\}$. For the outside condition: an unselected
 literal vertex sees only its gate among touched $\mathcal{Z}$
@@ -364,8 +364,8 @@ vertices; an unselected proxy sees at most $z_C$.
 
 ($\Rightarrow$) Let $B$ be any solution. (1)~A selected proxy pulls
 its base: $p_{C,j} \in B$ touches both copies; if the base were
-outside it would have two touched neighbours. (2)~A selected base
-pulls $a$: $t_i \in B$ touches $\gamma_i$, whose neighbour $f_i$ is
+outside it would have two touched neighbors. (2)~A selected base
+pulls $a$: $t_i \in B$ touches $\gamma_i$, whose neighbor $f_i$ is
 group-blocked, so $a \in B$ (else two outside). (3)~Nonempty $\Rightarrow
 a \in B$, by (1) and (2). (4)~$a \in B$ forces a full assignment:
 every gate is touched, so at least one of $t_i, f_i$ is in $B$, and
@@ -383,7 +383,7 @@ per-position.
 $G(F)$ is constructible in linear time, bipartite
 (Claim~\ref{cl:bip}), and of radius exactly~3
 (Claims~\ref{cl:conn},~\ref{cl:radius}). It has a matching cut iff a
-case-A1 colouring exists (Section~\ref{sec:cases}), iff
+case-A1 coloring exists (Section~\ref{sec:cases}), iff
 $\textsc{Island}(I(F))$ is YES (Lemma~\ref{lem:reform} and the
 discussion following it), iff $F$ is satisfiable
 (Lemma~\ref{lem:island}). The source problem is NP-complete
