@@ -122,6 +122,9 @@ not maintained entry points).
 
 ## Provenance and timestamps
 
+Archived: **DOI [10.5281/zenodo.22025742](https://doi.org/10.5281/zenodo.22025742)**
+(Zenodo, release v1.0, 2026-08-20). Cite the DOI.
+
 Developed 2026-08-16 to 2026-08-18. The private working repository
 holds the complete commit-level history of the arc, including the
 refuted first reduction, the defect taxonomy that re-scoped the
